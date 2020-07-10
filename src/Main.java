@@ -1,8 +1,22 @@
 import job.Hero;
+import job.Thief;
 import job.Wizard;
 
 public class Main {
+	public static void heal(int hp) {
+		hp += 10;
+	}
+	public static void heal(Thief thief) {
+		thief.setHp(thief.getHp()+10);
+	}
+
 	public static void main(String[] args) {
+		int baseHp = 25;
+		Thief t = new Thief("アサカ", baseHp);
+		heal(baseHp);
+		heal(t);
+		System.out.println(baseHp +":"+ t.getHp());
+
 		Hero h1 = new Hero();
 		h1.setHp(100);
 		Hero h2 = h1;
