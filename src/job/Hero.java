@@ -7,14 +7,18 @@ public class Hero {
 	private Sword sword;
 	private String name;
 
-
+	// 引数が違えばコンストラクタもオーバーロードできる
 	public Hero(String name) {
 		this.name = name;
 		Sword sword = new Sword();
 		this.sword = sword;
 	}
-
+	// コンストラクタ
+	// インスタンス化する際は、必ずコンストラクタが呼び出される
+	// 未定義の場合は、デフォルトコンストラクタが呼び出される
+	// 引数はなし、メソッド名がクラス名と完全に等しい
 	public Hero() {
+		// コンストラクタの中でもコンストラクタを呼び出せる
 		this("たかし");
 	}
 
